@@ -14,7 +14,7 @@
 ## @export
 ##' @author Lang Zhou and Guangchuang Yu
 ##' @noRd
-prepare_msa <- function(msa) {
+prepare_msa <- function(msa, msa.type) {
     if (missingArg(msa)) {
         stop("no input...")
     } else if (inherits(msa, "character")) {
