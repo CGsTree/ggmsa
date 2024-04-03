@@ -18,7 +18,7 @@ prepare_msa <- function(msa) {
     if (missingArg(msa)) {
         stop("no input...")
     } else if (inherits(msa, "character")) {
-        msa <- fa_read(msa)
+        msa <- fa_read(msa, type = msa.type)
     } else if (!class(msa) %in% supported_msa_class) {
         stop("multiple sequence alignment object no supported...")
     }

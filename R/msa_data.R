@@ -202,11 +202,11 @@ msa_data <- function(tidymsa, font = "helvetical",
 ##' fasta <- system.file("extdata", "sample.fasta", package = "ggmsa")
 ##' aln <- tidy_msa(msa = fasta, start = 10, end = 100)
 ##' @author Guangchuang Yu
-tidy_msa <- function(msa, start = NULL, end = NULL) {
+tidy_msa <- function(msa, start = NULL, end = NULL, msa.type = NULL) {
     if(inherits(msa, "character") && length(msa) > 1) {
         aln <- msa
     }else {
-        aln <- prepare_msa(msa)
+        aln <- prepare_msa(msa, msa.type)
     }
     alnmat <- lapply(seq_along(aln), function(i) {
         ##Preventing function collisions
