@@ -96,7 +96,7 @@ ggmsa <- function(msa,
                   show.legend = FALSE,
                   msa.type=NULL) {
 
-    data <- tidy_msa(msa, start = start, end = end, msa.type = msatype)
+    data <- tidy_msa(msa, start = start, end = end, msa.type = msa.type)
 
     ggplot() + geom_msa(data, font = font,
                         color = color,
